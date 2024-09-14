@@ -30,12 +30,11 @@ public class ForexService {
             e.printStackTrace();
         }
 
-        List<CurrencyDTO> currencyDTOList = usdHistories.stream().
+        assert usdHistories != null;
+        return usdHistories.stream().
                 map(usdHistory ->
-                        new CurrencyDTO(usdHistory.getDate().toString(),
+                        new CurrencyDTO(usdHistory.getDate(),
                                 usdHistory.getAmount()))
                 .collect(Collectors.toList());
-
-        return currencyDTOList;
     }
 }

@@ -100,7 +100,7 @@ public class CronJobServiceTest {
     }
 
     @Test
-    public void testPerformTask_EmptyApiResponse() throws Exception {
+    public void testPerformTask_EmptyApiResponse() {
         // Mock an empty response body
         String jsonResponse = "[]";
 

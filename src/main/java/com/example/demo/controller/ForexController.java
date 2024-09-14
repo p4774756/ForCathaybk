@@ -36,9 +36,8 @@ public class ForexController {
         List<CurrencyDTO> usdDailyHistories = forexService.performTask(query);
 
         errorResponse = new ErrorResponse("0000", "成功“");
-        ForexResponse response = new ForexResponse(errorResponse, usdDailyHistories);
 
-        return response;
+        return new ForexResponse(errorResponse, usdDailyHistories);
     }
 
     private ErrorResponse validateDates(ForexQueryDTO query) {
